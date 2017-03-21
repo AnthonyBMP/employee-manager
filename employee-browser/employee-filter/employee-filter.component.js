@@ -13,9 +13,9 @@
     }    
   }
 
-  angular.module('employeeManager')
+  angular.module('employeeBrowser')
     .component('employeeFilterControls', {
-        templateUrl: 'employee-filter/employee-filter.component.html',
+        templateUrl: 'employee-browser/employee-filter/employee-filter.component.html',
         controller: EmployeeFilterController,
         bindings: {
           emitFilter: '&filtered'

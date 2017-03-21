@@ -1,9 +1,9 @@
 (function(angular) {
   "use strict";
 
-  angular.module('employeeManager')
+  angular.module('employeeBrowser')
     .component('employeeListItem', {
-        templateUrl: 'employee-list-item/employee-list-item.component.html',
+        templateUrl: 'employee-browser/employee-list-item/employee-list-item.component.html',
         bindings: {
           e: '<employee'
         }

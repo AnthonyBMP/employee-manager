@@ -14,9 +14,9 @@
     }
   }
 
-  angular.module('employeeManager')
+  angular.module('employeeBrowser')
     .component('employeeList', {
-        templateUrl: 'employee-list/employee-list.component.html',
+        templateUrl: 'employee-browser/employee-list/employee-list.component.html',
         controller: EmployeeListController,
         bindings: {
           employees: "<emps",

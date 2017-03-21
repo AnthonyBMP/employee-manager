@@ -3,7 +3,13 @@
 
   class EmployeeManagerController {
     constructor(employeeRetriever) {
-      this.employees = employeeRetriever.retrieve();
+      employeeRetriever.retrieve()
+        .then((response) => {
+          this.employees = response.data;
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
 
     select(newSelected) {

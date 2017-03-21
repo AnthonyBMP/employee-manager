@@ -1,8 +1,12 @@
 (function(angular) {
 
   class EmployeeRetriever {
+    constructor($http) {
+      this.$http = $http;
+    }
+
     retrieve() {
-      return ['Judd','Karen','Lindsay','Scott','Trish','Anthony'];
+      return this.$http.get('http://localhost:8084/employees');
     }
   }
 
