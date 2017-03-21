@@ -1,0 +1,16 @@
+<div class="row">
+  <employee-list-item
+        ng-click="$ctrl.select(emp)"
+        ng-class="{ selected: emp == $ctrl.selected }" 
+        ng-repeat="emp in $ctrl.employees | filter:$ctrl.filter" 
+        employee="emp">
+  </employee-list-item>
+</div>
+
+<style>
+  .selected .list-item{
+    color: aliceblue;
+    border-radius: 5px;
+    background-color: darkslategray
+  }
+</style>
