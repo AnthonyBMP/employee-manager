@@ -10,7 +10,7 @@
     }
   }
 
-  angular.module('employeeManager',[])
+  angular.module('employeeManager')
     .service('employeeRetriever', EmployeeRetriever);
 
 })(angular);
