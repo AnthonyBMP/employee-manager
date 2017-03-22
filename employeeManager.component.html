@@ -4,6 +4,7 @@
     <employee-list emps="$ctrl.employees" filter="$ctrl.filter"></employee-list>
   </div>
   <div class="col s8">
+    <add-employee-form></add-employee-form>
     <div ng-if="!$ctrl.selectedEmployee.current">No employee selected</div>
     <employee-detail ng-if="$ctrl.selectedEmployee.current" employee="$ctrl.selectedEmployee.current"></employee-detail>
   </div>
