@@ -1,8 +1,9 @@
 <div class="simple-card">
   <employee-title 
-      first="{{$ctrl.selectedEmployee.current.first_name}}" 
-      last="{{$ctrl.selectedEmployee.current.last_name}}">
+      first="{{$ctrl.emp.first_name}}" 
+      last="{{$ctrl.emp.last_name}}">
   </employee-title>
+  <p>They work for {{$ctrl.company}}</p>
   <button ng-click="$ctrl.seeManager()">See Manager</button>
-  <pre>{{$ctrl.selectedEmployee.current | json}}</pre>
+  <pre>{{$ctrl.emp | json}}</pre>
 </div>

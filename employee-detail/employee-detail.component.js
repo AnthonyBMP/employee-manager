@@ -2,9 +2,15 @@
   "use strict";
 
   class EmployeeDetailController {
-    constructor(selectedEmployee,employeeRetriever) {
+    constructor(selectedEmployee,employeeRetriever,companyInfo) {
       this.selectedEmployee = selectedEmployee;
       this.employeeRetriever = employeeRetriever;
+      this.companyInfo = companyInfo;
+    }
+
+    $onChanges() {
+      this.companyInfo.getCompanyName(this.selectedEmployee.current.id)
+        .then(name => this.company = name);
     }
 
     seeManager() {
@@ -24,7 +30,10 @@
   angular.module('employeeManager')
     .component('employeeDetail', {
         templateUrl: 'employee-detail/employee-detail.component.html',
-        controller: EmployeeDetailController
+        controller: EmployeeDetailController,
+        bindings: {
+          emp: '<employee'
+        }
     });
 
 })(angular);
