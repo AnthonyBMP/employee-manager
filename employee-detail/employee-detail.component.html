@@ -1,6 +1,4 @@
 <div class="simple-card">
-  <div>
-  Details for {{$ctrl.emp.first_name}}
-  </div>
+  <employee-title first="{{$ctrl.emp.first_name}}" last="{{$ctrl.emp.last_name}}"></employee-title>
   <pre>{{$ctrl.emp | json}}</pre>
 </div>

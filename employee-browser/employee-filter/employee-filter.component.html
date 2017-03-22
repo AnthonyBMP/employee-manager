@@ -1,4 +1,6 @@
 <div class="simple-card">
-  <input type="text" ng-model="$ctrl.filterCrit" placeholder="Filter Employees">
-  <button ng-click="$ctrl.setFilter()">Set Filter</button>
+  <input type="text" 
+          ng-model="$ctrl.filterCrit"
+          ng-change="$ctrl.setFilter()" 
+          placeholder="Filter Employees">
 </div>
