@@ -2,7 +2,7 @@
   "use strict";
 
   class EmployeeManagerController {
-    constructor(employeeRetriever) {
+    constructor(employeeRetriever,selectedEmployee) {
       employeeRetriever.retrieve()
         .then((response) => {
           this.employees = response.data;
@@ -10,10 +10,12 @@
         .catch((err) => {
           console.log(err);
         });
+
+        this.selectedEmployee = selectedEmployee;
     }
 
     select(newSelected) {
-      this.selectedEmployee = newSelected;
+      this.selectedEmployee.current = newSelected;
     }
 
     setFilter(f) {

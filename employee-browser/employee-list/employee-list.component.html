@@ -1,7 +1,7 @@
 <div class="row">
   <employee-list-item
         ng-click="$ctrl.select(emp)"
-        ng-class="{ selected: emp == $ctrl.selected }" 
+        ng-class="{ selected: emp.id === $ctrl.selectedEmployee.current.id }" 
         ng-repeat="emp in $ctrl.employees | filter:$ctrl.filter" 
         employee="emp">
   </employee-list-item>

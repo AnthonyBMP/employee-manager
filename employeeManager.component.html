@@ -1,10 +1,10 @@
 <div class="row">
   <div class="col s4">
     <employee-filter-controls filtered="$ctrl.setFilter(newFilter)"></employee-filter-controls>
-    <employee-list emps="$ctrl.employees" filter="$ctrl.filter" selected="$ctrl.select(newSelected)"></employee-list>
+    <employee-list emps="$ctrl.employees" filter="$ctrl.filter"></employee-list>
   </div>
   <div class="col s8">
-    <div ng-if="!$ctrl.selectedEmployee">No employee selected</div>
-    <employee-detail ng-if="$ctrl.selectedEmployee" employee="$ctrl.selectedEmployee"></employee-detail>
+    <div ng-if="!$ctrl.selectedEmployee.current">No employee selected</div>
+    <employee-detail ng-if="$ctrl.selectedEmployee.current" employee="$ctrl.selectedEmployee.current"></employee-detail>
   </div>
 </div>

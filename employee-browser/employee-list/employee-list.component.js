@@ -2,15 +2,12 @@
   "use strict";
 
   class EmployeeListController {
-    constructor() {
-      this.selected = '';
+    constructor(selectedEmployee) {
+      this.selectedEmployee = selectedEmployee;
     }
 
     select(emp) {
-      this.selected = emp;
-      this.emitSelected({
-        newSelected: emp
-      });
+      this.selectedEmployee.current = emp;
     }
   }
 
@@ -20,8 +17,7 @@
         controller: EmployeeListController,
         bindings: {
           employees: "<emps",
-          filter: "<",
-          emitSelected: '&selected'
+          filter: "<"
         }
     });
 
