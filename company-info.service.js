@@ -8,7 +8,7 @@
     }
 
     getCompanyInfoForEmp(id) {
-      return this.$http.get('http://localhost:8084/companies')
+      return this.$http.get('/api/companies')
         .then(res => {
           return res.data;
         })
@@ -23,7 +23,7 @@
     }
 
     getColorForEmp(id) {
-      return this.$http.get('http://localhost:8084/colors')
+      return this.$http.get('/api/colors')
         .then(res => res.data)
         .then(colors => {
           if(id % 3 === 0)

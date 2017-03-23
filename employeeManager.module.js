@@ -1,6 +1,6 @@
 (function(angular) {
   "use strict";
   
-  angular.module('employeeManager', ['employeeBrowser']);
+  angular.module('employeeManager', ['employeeBrowser','validators']);
 
 })(angular);

@@ -1,7 +1,8 @@
 <form name="$ctrl.form" novalidate>
     <label>
       Name:
-      <input type="text" ng-model="$ctrl.name" required>
+      <input name="name" type="text" ng-model="$ctrl.name" required must-contain-space>
+      <span ng-if="$ctrl.form.name.$error.containsSpace">Name must contain a space</span>
     </label>
     <label>
       E-mail:

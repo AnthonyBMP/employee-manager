@@ -7,14 +7,14 @@
 
     retrieve() {
       if(!this.cache) {
-        this.cache = this.$http.get('http://localhost:8084/employees');
+        this.cache = this.$http.get('/api/employees');
       }
 
       return this.cache;
     }
 
     addEmployee(employee) {
-      this.$http.post('http://localhost:8084/employees', {
+      this.$http.post('/api/employees', {
         first_name: employee.name.split(' ')[0],
         last_name: employee.name.split(' ')[1],
         email: employee.email,

@@ -8,7 +8,7 @@
       this.companyInfo = companyInfo;
     }
 
-    $onChanges() {
+    $onChanges(changes) {
       this.companyInfo.getCompanyName(this.selectedEmployee.current.id)
         .then(name => this.company = name);
     }
